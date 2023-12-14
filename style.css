@@ -34,6 +34,7 @@ h1 {
 main {
     background-color: rgb(29 45 60);
     overflow-y: auto;
+    position: relative;
 }
 
 .container {
@@ -61,5 +62,35 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
+.off-canvas {
+    background-color: rgba(17, 32, 48, 0.9);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 90%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.close-btn {
+    background-color: red;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.close-btn:hover {
+    opacity: 50%;
+}

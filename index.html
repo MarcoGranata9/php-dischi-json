@@ -22,10 +22,17 @@
         </header>
     
         <main>
+            <div class="off-canvas" v-show="show">
+                <img :src="singleDisk.poster" alt=""> 
+                <h3>{{ singleDisk.title }}</h3>
+                <p>{{ singleDisk.author }}</p>
+                <p>{{ singleDisk.year }}</p>
+                <button class="close-btn" @click="closeCanvas">X</button>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col" v-for="disk in diskArray">
-                        <div class="card">                                  
+                    <div class="col" v-for="(disk, index) in diskArray">
+                        <div class="card" @click="diskDetails(index)">      
                             <img :src="disk.poster" alt=""> 
                             <h3>{{ disk.title }}</h3>
                             <p>{{ disk.author }}</p>
