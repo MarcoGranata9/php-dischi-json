@@ -12,9 +12,14 @@ createApp({
     methods: {
         diskDetails(index) {
             this.show = true;
-            axios.get(this.apiUrl).then((resp) => {
-                console.log(resp.data[index]);
-                this.singleDisk = resp.data[index];
+            const params = {
+                id: index,
+            }
+            console.log(params);
+            axios.get(this.apiUrl, {params}).then((resp) => {
+                console.log(resp);
+                this.singleDisk = resp.data
+                console.log(this.singleDisk);
             })
         },
         closeCanvas() {

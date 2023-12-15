@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 
-    
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Vue -->
@@ -23,10 +22,11 @@
     
         <main>
             <div class="off-canvas" v-show="show">
-                <img :src="singleDisk.poster" alt=""> 
+                <img :src="singleDisk.poster" alt="">
                 <h3>{{ singleDisk.title }}</h3>
                 <p>{{ singleDisk.author }}</p>
                 <p>{{ singleDisk.year }}</p>
+                <p>{{ singleDisk.genre }}</p>
                 <button class="close-btn" @click="closeCanvas">X</button>
             </div>
             <div class="container">

@@ -33,8 +33,9 @@ h1 {
 
 main {
     background-color: rgb(29 45 60);
-    overflow-y: auto;
+    overflow: auto;
     position: relative;
+    height: calc(100% - 60px);
 }
 
 .container {
